@@ -1,0 +1,63 @@
+.coupon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.coupon-wrapper {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  background-color: #ffcc00;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.coupon-code {
+  font-size: 18px;
+  color: #333;
+  position: absolute;
+  right: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  letter-spacing: 2px;
+  clip-path: inset(0 0 0 70%);
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease;
+}
+
+.label.slide {
+  transform: translateX(-12%);
+}
+
+.label.slide + .coupon-code {
+  opacity: 1;
+}
+
+.reveal-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+.reveal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
